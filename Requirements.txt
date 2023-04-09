@@ -1,0 +1,10 @@
+unittest
+matplotlib.pyplot
+plotly.graph_objects
+yfinance
+requests
+numpy
+json
+datetime
+pandas
+mplfinance
