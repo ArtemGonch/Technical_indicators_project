@@ -5,7 +5,6 @@ import plotly.graph_objects as go
 import yfinance as yf
 import requests
 import numpy as np
-import json
 import datetime
 import pandas as pd
 import mplfinance as mpf
