@@ -1,10 +1,7 @@
-unittest
-matplotlib.pyplot
-plotly.graph_objects
-yfinance
-requests
-numpy
-json
-datetime
-pandas
-mplfinance
+matplotlib 3.5.2
+mplfinance 0.12.9b7
+numpy 1.21.5
+pandas 1.4.4
+plotly 5.9.0
+unittest 
+yfinance 0.2.14
