@@ -8,7 +8,7 @@ import plotly.graph_objects as go
 import random as random
 
 
-def draw(indicator, data, symb):
+def draw(indicator, data, symb, ind):
     plt.style.use('fivethirtyeight')
     plt.rcParams['figure.figsize'] = (20, 10)
     ax1 = plt.subplot2grid((10, 1), (0, 0), rowspan=4, colspan=1)
@@ -16,7 +16,7 @@ def draw(indicator, data, symb):
     ax1.plot(data['Close'], linewidth=2)
     ax1.set_title(symb)
     ax2.plot(indicator, color=(random.random(), random.random(), random.random()), linewidth=1)
-    ax2.set_title('CCI')
+    ax2.set_title(ind)
     plt.show()
 
 class Project_run:
@@ -37,19 +37,19 @@ class Project_run:
                 print('no such indicator', elem)
                 raise Exception
             if(elem == 'CCI'):
-                draw(b.CCI(data), data, symb)
+                draw(b.CCI(data), data, symb, 'CCI')
             elif(elem == 'EVM'):
-                draw(b.EVM(data), data, symb)
+                draw(b.EVM(data), data, symb, 'EVM')
             elif (elem == 'SMA'):
-                draw(b.SMA(data), data, symb)
+                draw(b.SMA(data), data, symb, 'SMA')
             elif(elem == 'EWMA'):
-                draw(b.EWMA(data), data, symb)
+                draw(b.EWMA(data), data, symb, 'EWMA')
             elif(elem == 'ROC'):
-                draw(b.ROC(data), data, symb)
+                draw(b.ROC(data), data, symb, 'ROC')
             elif (elem == 'BBANDS'):
-                draw(b.BBANDS(data), data, symb)
+                draw(b.BBANDS(data), data, symb, 'BBANDS')
             elif (elem == 'ForceIndex'):
-                draw(b.ForceIndex(data), data, symb)
+                draw(b.ForceIndex(data), data, symb, 'ForceIndex')
             elif(elem == 'RSI'):
                 plt.style.use('fivethirtyeight')
                 plt.rcParams['figure.figsize'] = (20, 10)
