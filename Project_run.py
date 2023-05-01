@@ -31,7 +31,6 @@ class Project_run:
         b = Indicators()
         data = a.candlesusdt(symb, begin, end)
         print(data)
-        mpf.plot(data, type='candle', mav=(3, 6, 9), volume=True)
         for elem in indicators:
             if elem not in my_indicators:
                 print('no such indicator', elem)
