@@ -1,6 +1,7 @@
 import unittest
 import numpy as np
 import yfinance as yf
+
 from Indicators import Indicators
 
 data1 = yf.download('BTC', start='2022-01-01', end='2023-01-01')
