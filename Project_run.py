@@ -23,7 +23,7 @@ class Project_run:
     @staticmethod
     def project_run():
         my_indicators = ['CCI', 'EVM', 'SMA', 'EWMA', 'ROC', 'BBANDS', 'ForceIndex', 'RSI']
-        symb = input('Ведите монету для анализа:\n')
+        symb = input('Ведите монету для анализа(список доступных монет: BTC, SPY, TSLA, AAPL, GOOG, MSFT, BNB, RPL, ID, RAD, SQL, LTC, TRX):\n')
         begin = input('Дата начала анализа в формате YYYY-MM-DD:\n')
         end = input('Дата конца анализа в формате YYYY-MM-DD:\n')
         indicators = input('Введите список необходимых индикаторов:\n').split()
@@ -31,6 +31,7 @@ class Project_run:
         b = Indicators()
         data = a.candlesusdt(symb, begin, end)
         print(data)
+        mpf.plot(data, type='candle', mav=(3, 6, 9), volume=True, warn_too_much_data=10000000000000000)
         for elem in indicators:
             if elem not in my_indicators:
                 print('no such indicator', elem)
