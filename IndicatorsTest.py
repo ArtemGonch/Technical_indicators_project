@@ -1,7 +1,7 @@
-from Indicators import Indicators
-import numpy as np
 import unittest
+import numpy as np
 import yfinance as yf
+from Indicators import Indicators
 
 data1 = yf.download('BTC', start='2022-01-01', end='2023-01-01')
 #2022-01-01 Open: 98.309998 High: 98.309998 Low: 98.294701 Close: 98.294701
