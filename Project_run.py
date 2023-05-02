@@ -23,7 +23,7 @@ class Project_run:
     @staticmethod
     def project_run():
         my_indicators = ['CCI', 'EVM', 'SMA', 'EWMA', 'ROC', 'BBANDS', 'ForceIndex', 'RSI']
-        symb = input('Ведите монету для анализа(список доступных монет: BTC, SPY, TSLA, AAPL, GOOG, MSFT, BNB, RPL, ID, RAD, SQL, LTC, TRX):\n')
+        symb = input('Ведите монету для анализа(формат ввода BTC-USD:\n')
         begin = input('Дата начала анализа в формате YYYY-MM-DD:\n')
         end = input('Дата конца анализа в формате YYYY-MM-DD:\n')
         indicators = input('Введите список необходимых индикаторов:\n').split()
